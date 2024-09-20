@@ -9,6 +9,7 @@
 			"$styles/*": "./src/styles/*",
 			"$svg/*": "./src/svg/*",
 			"$utils/*": "./src/utils/*",
+			"$assets/*": "./static/assets/*"
 		}
 	},
 	"include": [
