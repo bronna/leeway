@@ -1,0 +1,84 @@
+@font-face {
+	font-family: "Inria Serif";
+	src: url("assets/fonts/inriaserif-light-webfont.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Serif";
+	src: url("assets/fonts/inriaserif-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Serif";
+	src: url("assets/fonts/inriaserif-bold-webfont.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Sans";
+	src: url("assets/fonts/inriasans-light-webfont.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Sans";
+	src: url("assets/fonts/inriasans-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inria Sans";
+	src: url("assets/fonts/inriasans-bold-webfont.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("assets/fonts/barlow-light-webfont.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("assets/fonts/barlow-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("assets/fonts/barlow-bold-webfont.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+
+
+
