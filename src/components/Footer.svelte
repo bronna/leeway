@@ -56,7 +56,7 @@
 		</p>
 	</section>
 
-	<section class="links">
+	<!-- <section class="links">
 		<ul>
 			{#each links as link}
 				<li>
@@ -66,7 +66,7 @@
 				</li>
 			{/each}
 		</ul>
-	</section>
+	</section> -->
 </footer>
 
 <style>

@@ -99,10 +99,11 @@
     }
 
     .text-content h3 {
+        font-family: "Hanken Grotesk", sans-serif;
         margin: 0;
-        font-family: "Inria Serif", serif;
         font-size: 3.4rem;
-        font-weight: 700;
+        font-weight: 800;
+        font-variation-settings: "wght" 200;
         line-height: 3.6rem;
         letter-spacing: -0.03rem;
     }

@@ -79,6 +79,16 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "Hanken Grotesk";
+	src: url("assets/fonts/hankengrotesk-variablefont_wght-webfont.woff2") format("woff2 supports variations"),
+		url("assets/fonts/hankengrotesk-variablefont_wght-webfont.woff2") format("woff2-variations");
+	font-weight: 100 900;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
 
 
 

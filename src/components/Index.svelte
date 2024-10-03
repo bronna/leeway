@@ -3,6 +3,7 @@
 	import { projects } from "$data/projectData.js"
 	import Grid from "$components/Grid.svelte"
 	import Footer from "$components/Footer.svelte"
+    import Placeholder from "./Placeholder.svelte";
 
 	// const copy = getContext("copy")
 	// const data = getContext("data")
@@ -26,5 +27,6 @@
     );
 </script>
 
-<Grid {gridItems} />
+<Placeholder />
+<!-- <Grid {gridItems} /> -->
 <Footer />
