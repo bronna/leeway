@@ -28,7 +28,7 @@
 <header>
 	<div class="wordmark" style="width:{width};">
 		<a 
-			href="https://google.com" 
+			href="https://leeway.studio" 
 			aria-label="Google Placeholder" 
 			target="_self"
 			class="wordmark-text"
@@ -98,7 +98,7 @@
 		width: 80%;
 		max-width: 300px;
 		opacity: 0.94;
-		background-color: var(--color-gray-800);
+		background-color: var(--color-gray-900);
 		padding: 5rem 1rem 1rem;
 		box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 		z-index: 10;
