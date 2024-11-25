@@ -35,6 +35,42 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "Bungee Shade";
+	src: url("assets/fonts/bungeeshade-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bungee";
+	src: url("assets/fonts/bungee-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Shrikhand";
+	src: url("assets/fonts/shrikhand-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Krona One";
+	src: url("assets/fonts/kronaone-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
 
 
 

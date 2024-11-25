@@ -1,0 +1,130 @@
+---
+title: "Beyond SVG: when to use Canvas and WebGL for your data visualizations"
+date: "2024-02-08"
+updated: "2024-02-08"
+categories:
+  - "svg"
+  - "canvas"
+  - "webgl"
+  - "apis"
+  - "javascript"
+coverImage:
+coverWidth: 0
+coverHeight: 0
+excerpt: Do you need faster performance, more data points, or fanciful artistic effects in your data visualization? Learn how to use Canvas and WebGL to enable these possibilities, and more
+---
+
+Most of us were introduced to visualizations on the web through SVG, and SVG is by and large the most common way to render interactive visualizations today. [D3.js](https://d3js.org/), the widely used data visualization library, uses SVG by default, and [many](https://shirleywu.studio/filmflowers/) [many](https://www.poppyfield.org/) [many](https://observablehq.com/@dbridges/visualizing-seasonal-daylight) phenomenal visualizations utilize SVG’s powers. But, occasionally, when you’re working on your own phenomenal visualization, you’ll encounter barriers.
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+  <img src="/images/traffic-cone.png" alt="orange and white striped traffic cone" width="40px">
+</div>
+
+
+Maybe your graphics are taking forever to load. Maybe you need to include more data points to [reduce the risk of prejudice](https://nightingaledvs.com/unfair-comparisons-how-visualizing-social-inequality-can-make-it-worse/). Maybe your dearest desire is to have your bar chart apparate as three-dimensional sparkly fog.
+
+<div class="article-image">
+  <img src="/images/smoke.jpg" alt="Pastel-colored whispy smoke trails with sparkles and butterflies against a dark background" width="400px">
+</div>
+
+Whatever it is, sometimes...SVG just isn’t the answer.
+
+That’s where Canvas and WebGL come in. 
+
+### Why different APIs enable different things
+
+From the devices your audience will use, to the Javascript libraries you implement in your code, every visualization is unique. Your visualization will have many layers that come together to make it appear on screen:
+
+<div class="article-image">
+    <img src="/images/viz-layers.jpg" alt="Stacked boxes showing the layers of a data visualization: Hardware, Browser, API, Libraries, and Code" width="300">
+</div>
+
+We’re not going to talk too much about the layers on the far ends in this article, but I do want to draw your attention to the center. 
+
+<div class="article-image">
+    <img src="/images/layers-arrows.png" alt="Stacked boxes showing the layers of a data visualization: Hardware, Browser, API, Libraries, and Code. Red arrows point towards the API layer in the center" width="500">
+</div>
+
+The API layer is right there, smack dab in the middle, but it often gets skipped over. And it can actually have a much greater impact on your visualization than the other layers, including the libraries. That’s because the API layer is the main “bridge” between the machine your audience is using and your app. 
+
+<div class="article-image">
+    <img src="/images/layers-arrows-bridge.png" alt="Stacked boxes showing the layers of a data visualization: Hardware, Browser, API, Libraries, and Code. Red arrows point towards the API layer in the center. A blue box covers the 'code' and 'libraries' boxes, grouping them as 'your app,' while a purple box covers the 'browser' and 'hardware' boxes, grouping them as 'your audience's machine'" width="500">
+</div>
+
+And different bridges can take you to very different places.
+
+What are those differences?
+
+1. Number of elements on the DOM
+
+<div class="article-image">
+    <img src="/images/venn1.png" alt="Venn diagram shows SVG, Canvas, and WebGL as different pastel colored circles. 'lots of individual elements' shows up in the SVG section, whereas 'one <canvas> element that gets re-painted over and over' shows up in the overlapping Canvas & WebGL section" width="700">
+</div>
+<div class="article-image">
+    <img src="/images/venn2.png" alt="Venn diagram shows SVG, Canvas, and WebGL as different pastel colored circles. A screenshot showing lots of elements on the DOM shows up in the SVG section, whereas a screenshot showing a single <canvas> element on the DOm shows up in the overlapping Canvas & WebGL section" width="700">
+</div>
+    
+2. Hardware used for processing
+    
+<div class="article-image">
+    <img src="/images/venn3.png" alt="Venn diagram shows SVG, Canvas, and WebGL as different pastel colored circles. 'runs on the CPU (slow)' shows up in the overlapping SVG & Canvas section, whereas 'runs on the GPU (fast)' shows up in the WebGL section" width="700">
+</div>
+<div class="article-image">
+    <img src="/images/venn4.png" alt="Venn diagram shows SVG, Canvas, and WebGL as different pastel colored circles. A drawing showing one processor shows up in the overlapping SVG & Canvas section, whereas a drawing showing many processors in parallel shows up in the WebGL section" width="700">
+</div>
+    
+
+These two differences alone lead to vastly different realms of possibility. They impact several things, including: (make more visual and add links to examples for each)
+
+- Dimensional capabilities
+    - SVG: 2D
+    - Canvas: 2D
+    - WebGL: 2D & 3D
+
+- Number of elements that can be animated
+    - SVG: hundreds
+    - Canvas: thousands
+    - WebGL: millions
+
+- Ability to render complex artistic effects (gradients, transparency, etc.)
+    - SVG: minimally
+    - Canvas: well
+    - WebGL: very well
+
+Does that mean that Canvas and WebGL are superior to SVG? Absolutely not! They’re just better suited to different things. If any of the following are the foremost priorities for your visualiation, SVG could very well be the better choice:
+
+- ability to interact with individual elements
+- extensive documentation & community
+- easy to implement accessibility features
+- renders extremely crisp graphics & text
+- straightforward to debug
+
+Once you're clear on what your visualization is trying to accomplish, these guidelines can help choose which API is the best match. From there, you can choose the libraries that you're most skilled at and thats strengths are also aligned with your vision. 
+
+This table gives an overview of everything we've talked about, and what will most likely need to be taken into consideration when bringing your graphics to life. Note: these aren't absolutes -- they're comparing the strengths and weaknesses of each API against each other. For example, it _is_ possible to interact with individual Canvas elements, it's just a lot more difficult to implement than with SVG.
+
+<div class="article-image">
+    <img src="/images/svg-canvas-webgl-compare.png" alt="Table summarizing and comparing the features previously stated about SVG, Canvas, and WebGL" width="800">
+</div>
+
+So if (for now) you’ve chosen the path of Canvas or WebGL, let's get to building!
+
+### Using Canvas and WebGL in your project
+
+How to set up each, where they diverge
+
+### Workshop: Canvas
+
+setup and cool 2D data sort (move tiny boxes or circles from one chart type to another)
+
+### Workshop: WebGL
+
+setup and cool feature (3D network graph)
+
+### Links to more resources

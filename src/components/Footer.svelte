@@ -75,7 +75,7 @@
 		color: var(--color-gray-200);
 		font-family: var(--sans);
 		padding: 3em 1em;
-		margin-top: 3em;
+		margin-top: 6em;
 	}
 
 	a,

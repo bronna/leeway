@@ -1,1 +1,35 @@
-{"meta":{"title":"title here","description":"Description here"},"body":[{"section":"intro","content":[{"type":"h4","value":"An h4 element with no attributes"},{"type":"text","value":"Some random text here, followed by an img tag."},{"type":"img","value":{"src":"assets/demo/test.jpg","alt":"A cat"}},{"type":"Test","value":{"label":"I’m a custom component!","value":"50"}}]}]}
+{
+	"meta": { "title": "title here", "description": "Description here" },
+	"body": [
+		{
+			"section": "intro",
+			"content": [
+				{ "type": "h4", "value": "This is a post" },
+				{
+					"type": "text",
+					"value": "Some random text here, followed by an img tag."
+				},
+				{ "type": "text", "value": "Some more random text" },
+				{
+					"type": "img",
+					"value": { "src": "/assets/demo/test.jpg", "alt": "A cat" }
+				},
+				{
+					"type": "Test",
+					"value": { "label": "I’m a custom component!", "value": "50" }
+				}
+			]
+		},
+		{
+			"section": "main",
+			"content": [
+				{ "type": "h4", "value": "this is main content" },
+				{ "type": "text", "value": "Some more random text" },
+				{
+					"type": "img",
+					"value": { "src": "/assets/demo/test.jpg", "alt": "A cat" }
+				}
+			]
+		}
+	]
+}

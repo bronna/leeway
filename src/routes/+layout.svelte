@@ -1,6 +1,7 @@
 <script>
 	import "$styles/app.css";
-	import Header from "$components/Header.svelte";
+	import Header from "$components/Header.svelte"
+	import Footer from "$components/Footer.svelte"
 </script>
 
 
@@ -8,10 +9,8 @@
 <main id="content">
 	<slot />
 </main>
+<Footer />
 
 
 <style>
-	main {
-		height: 100vh;
-	}
 </style>

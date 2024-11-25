@@ -1,8 +1,8 @@
 <script>
 	// an object of components that map to section names (e.g., { "Hero": Hero }) where Hero is a Svelte component
-	export let components = {};
+	export let components = {}
 	// an array of objects that contain a section name and content (either an array of object)
-	export let body = [];
+	export let body = []
 </script>
 
 {#each body as { section, content }}

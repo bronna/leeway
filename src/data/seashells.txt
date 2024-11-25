@@ -1,0 +1,19 @@
+[body]
+
+section: intro
+[.+content]
+h4: the firs step
+
+was to find the spiral. and build it from there
+
+{.img}
+src: assets/demo/test.jpg
+alt: A cat
+{}
+
+{.Test}
+label: Progress:
+value: 30
+{}
+
+[]

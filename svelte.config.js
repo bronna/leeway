@@ -1,5 +1,6 @@
 import adapterStatic from "@sveltejs/adapter-static";
 import sveltePreprocess from "svelte-preprocess";
+import { mdsvex } from "mdsvex";
 import autoprefixer from "autoprefixer";
 
 const preprocess = sveltePreprocess({
@@ -9,7 +10,15 @@ const preprocess = sveltePreprocess({
 });
 
 const config = {
-	preprocess,
+	// Add .svx as an extension for MDsveX
+	extensions: [".svelte", ".svx", ".md"],
+
+	preprocess: [
+		mdsvex({
+			extensions: [".svx", ".md"],
+		})
+	],
+
 	kit: {
 		adapter: adapterStatic({ strict: false }),
 		prerender: {

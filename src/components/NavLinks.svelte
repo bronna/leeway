@@ -33,7 +33,7 @@
         font-size: 1.2rem;
         text-decoration: none;
         color: var(--linkColor);
-        font-weight: 400;
+        font-weight: 300;
         line-height: 1.2;
         transition: color 0.3s ease;
     }
